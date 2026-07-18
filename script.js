@@ -113,4 +113,12 @@ document.querySelectorAll("[data-panel]").forEach((card) => {
   card.addEventListener("click", () => renderDetail(card.dataset.panel));
 });
 
+document.querySelectorAll(".checklist input").forEach((checkbox, index) => {
+  const key = `freshman-check-${index}`;
+  checkbox.checked = window.localStorage.getItem(key) === "1";
+  checkbox.addEventListener("change", () => {
+    window.localStorage.setItem(key, checkbox.checked ? "1" : "0");
+  });
+});
+
 renderDetail("report");
