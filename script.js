@@ -1,124 +1,91 @@
-const details = {
-  report: {
-    kicker: "01 · 报到当天",
-    title: "先完成身份核验，再处理宿舍和校园卡。",
+const taskData = {
+  before: {
+    kicker: "Before Campus",
+    title: "出发前 48 小时，把不能补的东西先放好",
     list: [
-      "进校后先找学院迎新点，核验身份、领取报到材料，再确认班级群和辅导员通知。",
-      "录取通知书、身份证、证件照、档案材料分开放，不要和大件行李混在一起。",
-      "宿舍钥匙、校园卡、缴费状态、军训或体检安排，按学院现场指引逐项确认。",
-      "家长陪同到校时，提前约好集合点，报到高峰期校门口和宿舍区都容易拥堵。"
+      "录取通知书、身份证、证件照、档案相关材料分开放，手机里同步保存电子照片。",
+      "导航收藏“山西工程科技职业大学”，地址以晋中市榆次区文华街 369 号为准，出行前再确认当年接站和入校要求。",
+      "生活用品先带刚需：换洗衣物、充电器、常用药、水杯、雨具。大件收纳到校后看宿舍尺寸再买。",
+      "提前关注学校官网、招生信息网和学院通知，不只依赖二手群消息。"
     ],
-    tip: "当天最重要的是跟紧学院通知。任何收费、兼职、办卡推销，先问辅导员或迎新志愿者。"
+    tip: "出发前不要把所有快递一次寄到学校。宿舍号和取件点确认后再下单，能减少排队和找件时间。"
+  },
+  report: {
+    kicker: "Report Day",
+    title: "报到日先跟学院流程走，不急着办额外项目",
+    list: [
+      "进校后先找学院迎新点，完成身份核验，确认班级群、辅导员、宿舍和当天集合安排。",
+      "缴费、校园卡、体检、军训服装等事项按现场指引逐项确认，遇到不清楚的先问迎新志愿者。",
+      "家长同行时提前约定校内集合点，搬行李前先确认宿舍楼和床位，避免走回头路。",
+      "当天任何涉及转账、贷款、电话卡、兼职押金的消息，都先暂停并向辅导员核实。"
+    ],
+    tip: "报到日最重要的是跟紧官方和学院通知，避免被临时摊位或非官方收费项目打乱节奏。"
   },
   dorm: {
-    kicker: "02 · 宿舍生活",
-    title: "先保证能睡、能洗、能充电，再慢慢升级舒适度。",
+    kicker: "Dorm Setup",
+    title: "宿舍先保证能睡、能洗、能充电，再慢慢升级",
     list: [
-      "床垫、被褥、枕头、床帘、衣架、拖鞋、洗漱包是第一优先级。",
-      "插排、电吹风、锅具等电器看宿舍管理规定，违规电器不要带。",
-      "收纳用品少量先买，等看到柜子和桌面尺寸后再补，避免买错尺寸。",
-      "和舍友早点约定卫生轮值、熄灯后声音、空调或风扇使用习惯。"
+      "床品、洗漱包、拖鞋、衣架、纸巾、垃圾袋优先级最高，其他装饰类用品可以延后。",
+      "插排、电吹风、锅具等电器先看宿舍管理规定，违规电器不要带也不要买。",
+      "收纳用品少量先买，等看到柜子、桌面和床下空间后再补，尺寸会更准确。",
+      "和舍友早一点约定卫生轮值、作息声音、空调或风扇使用习惯。"
     ],
-    tip: "宿舍不是一次性布置完成的。先轻装入住，开学后一周按真实需求补齐最稳。"
-  },
-  food: {
-    kicker: "03 · 吃饭喝水",
-    title: "先熟悉食堂和热水点，再探索周边。",
-    list: [
-      "开学第一周优先在校内吃饭，熟悉食堂窗口、错峰时间和校园卡支付方式。",
-      "准备一个耐摔水杯，确认宿舍楼或教学区热水位置。",
-      "外卖地址写清学校、楼号、宿舍区或取餐点，手机号保持畅通。",
-      "第一次聚餐建议选交通方便、价格透明的地方，避免刚入学就超预算。"
-    ],
-    tip: "不要只靠外卖解决三餐。军训或早八期间，稳定早餐比多睡十分钟更有用。"
+    tip: "宿舍不是一天布置完的。第一周的真实需求，比开学前的购物清单更可靠。"
   },
   study: {
-    kicker: "04 · 上课学习",
-    title: "课表、教务系统、教材和作业平台要尽早跑通。",
+    kicker: "First Classes",
+    title: "开课前跑通账号、教室和通知渠道",
     list: [
-      "第一周重点确认教室位置、课表变动、任课老师通知渠道。",
-      "教务系统、信息门户、校园网、邮箱等账号尽早登录一次，避免临交作业才发现密码问题。",
-      "教材先看班级通知，能等老师确认版本就不要急着全套购买。",
-      "图书馆、实训室、机房和自习空间可以在第一周顺路摸清。"
+      "第一周重点确认课表、教学楼位置、任课老师通知渠道和临时调课消息。",
+      "教务系统、校园网、邮箱、学习平台等账号尽早登录一次，避免交作业时才发现问题。",
+      "教材先等班级或老师确认版本，不急着一次买齐。",
+      "图书馆、自习空间、实训室、机房和常用打印点，可以在第一周顺路摸清。"
     ],
-    tip: "大学学习最怕信息漏看。班级群、学院网站、教务通知至少每天固定看一次。"
-  },
-  map: {
-    kicker: "05 · 交通路线",
-    title: "到校路线提前收藏，校内路线用第一周走熟。",
-    list: [
-      "学校办学地址为山西省晋中市榆次区文华街 369 号，导航时注意选择山西工程科技职业大学。",
-      "大件行李多时优先选择少换乘路线，到校后找志愿者和学院迎新点。",
-      "第一周把宿舍、食堂、教学楼、操场、快递点、医务室串成自己的常用路线。",
-      "晚上出行结伴，打车核对车牌，返校时间按学院和宿舍管理要求执行。"
-    ],
-    tip: "校内导航刚开始不熟很正常。把常去地点收藏到地图里，第二周就会顺很多。"
-  },
-  express: {
-    kicker: "06 · 快递网购",
-    title: "大件少寄、急用先带，地址等宿舍确认后再写。",
-    list: [
-      "被褥、收纳箱、椅垫等大件可以到校后下单，避免宿舍号变化或取件压力太大。",
-      "快递收件名用真实姓名，手机号不要写错，地址补全校区、楼号和宿舍区。",
-      "贵重电子产品尽量本人签收，拆箱前先检查外包装。",
-      "开学季取件排队很常见，错峰取件更省时间。"
-    ],
-    tip: "不要把全部生活用品一次性寄到学校。真实需求通常在入住两天后更清楚。"
-  },
-  club: {
-    kicker: "07 · 社团活动",
-    title: "先了解，再选择；不要被热闹推着走。",
-    list: [
-      "社团、学生会、团委活动、技能竞赛和志愿服务都值得看看，但不必一次报太多。",
-      "想提升简历，可以优先关注专业相关竞赛、实训项目、志愿服务和校内媒体。",
-      "面试类组织提前准备一分钟个人介绍，讲清楚可投入的时间。",
-      "不要为了合群牺牲作息、课程和身体状态。"
-    ],
-    tip: "大学活动的关键不是数量，是持续。选两个能长期坚持的方向，比报名十个更有用。"
+    tip: "大学学习怕信息漏看。班级群、学院网站、教务通知建议每天固定查看一次。"
   },
   safety: {
-    kicker: "08 · 安全避坑",
-    title: "钱、证件、账号、隐私，开学季都要多确认一步。",
+    kicker: "Safety Check",
+    title: "钱、证件、账号、隐私，开学季多核实一步",
     list: [
-      "任何涉及转账、贷款、刷单、垫付、代缴费的消息，都先停下来核实。",
-      "校园卡、身份证、银行卡、学生证不要借给陌生人使用。",
-      "兼职要看合同、地点、工资结算方式，不交押金，不交培训费。",
-      "遇到身体不适、财物丢失、矛盾纠纷，及时联系辅导员、宿管或学校相关部门。"
+      "任何要求私下转账、缴押金、开贷款、刷流水、代缴费的消息，都先截图再核实。",
+      "校园卡、身份证、银行卡、学生证不要借给陌生人使用，也不要随手拍照发群里。",
+      "兼职要看地点、合同、薪资结算方式，不交培训费，不交保证金。",
+      "身体不适、财物丢失、矛盾纠纷，及时联系辅导员、宿管或学校相关部门。"
     ],
-    tip: "真实老师和学校部门不会催促学生私下转账。拿不准就截图保存，找辅导员确认。"
+    tip: "真实老师和学校部门不会催促学生私下转账。拿不准就先停下，找辅导员确认。"
   }
 };
 
-const detail = document.querySelector("#detail");
-const kicker = document.querySelector("#detail-kicker");
-const title = document.querySelector("#detail-title");
-const list = document.querySelector("#detail-list");
-const tip = document.querySelector("#detail-tip");
+const taskButtons = document.querySelectorAll("[data-task]");
+const taskKicker = document.querySelector("#task-kicker");
+const taskTitle = document.querySelector("#task-title");
+const taskList = document.querySelector("#task-list");
+const taskTip = document.querySelector("#task-tip");
 
-function renderDetail(key) {
-  const item = details[key];
-  if (!item) return;
-  detail.classList.remove("active");
-  window.setTimeout(() => {
-    kicker.textContent = item.kicker;
-    title.textContent = item.title;
-    list.innerHTML = item.list.map((text) => `<li>${text}</li>`).join("");
-    tip.textContent = item.tip;
-    detail.classList.add("active");
-    detail.scrollIntoView({ behavior: "smooth", block: "center" });
-  }, 80);
+function renderTask(key) {
+  const task = taskData[key];
+  if (!task) return;
+
+  taskButtons.forEach((button) => {
+    button.classList.toggle("active", button.dataset.task === key);
+  });
+
+  taskKicker.textContent = task.kicker;
+  taskTitle.textContent = task.title;
+  taskList.innerHTML = task.list.map((item) => `<li>${item}</li>`).join("");
+  taskTip.textContent = task.tip;
 }
 
-document.querySelectorAll("[data-panel]").forEach((card) => {
-  card.addEventListener("click", () => renderDetail(card.dataset.panel));
+taskButtons.forEach((button) => {
+  button.addEventListener("click", () => renderTask(button.dataset.task));
 });
 
-document.querySelectorAll(".checklist input").forEach((checkbox, index) => {
-  const key = `freshman-check-${index}`;
-  checkbox.checked = window.localStorage.getItem(key) === "1";
+document.querySelectorAll(".checks input").forEach((checkbox, index) => {
+  const storageKey = `sxgkd-freshman-check-${index}`;
+  checkbox.checked = window.localStorage.getItem(storageKey) === "1";
   checkbox.addEventListener("change", () => {
-    window.localStorage.setItem(key, checkbox.checked ? "1" : "0");
+    window.localStorage.setItem(storageKey, checkbox.checked ? "1" : "0");
   });
 });
 
-renderDetail("report");
+renderTask("before");
