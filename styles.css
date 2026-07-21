@@ -240,7 +240,8 @@ footer p {
 .task-card,
 .checks label,
 .tool-grid a,
-.creator-strip {
+.creator-strip,
+.contact-card {
   border: 1px solid rgba(255, 253, 248, 0.82);
   border-radius: var(--radius);
   background: rgba(255, 253, 248, 0.76);
@@ -413,7 +414,8 @@ footer p {
 .workspace,
 .ledger,
 .tools,
-.creator-strip {
+.creator-strip,
+.contact-card {
   max-width: var(--content);
   margin: 0 auto;
 }
@@ -667,6 +669,63 @@ footer p {
   color: rgba(255, 253, 248, 0.74);
 }
 
+.contact-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+  padding: clamp(22px, 3vw, 34px);
+}
+
+.contact-copy p:not(.eyebrow) {
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.78;
+}
+
+.contact-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.contact-tags span {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(154, 78, 63, 0.08);
+  color: var(--brand);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.qr-card {
+  margin: 0;
+  justify-self: end;
+  width: min(100%, 300px);
+  padding: 12px;
+  border-radius: var(--radius);
+  background: rgba(154, 78, 63, 0.07);
+}
+
+.qr-card img {
+  width: 100%;
+  display: block;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.qr-card figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+}
+
 .mobile-dock {
   display: none;
 }
@@ -834,7 +893,8 @@ footer {
   .task-card,
   .checks label,
   .tool-grid a,
-  .creator-strip {
+  .creator-strip,
+  .contact-card {
     box-shadow: var(--mobile-shadow);
   }
 
@@ -901,6 +961,22 @@ footer {
   .creator-strip img {
     width: 72px;
     height: 72px;
+  }
+
+  .contact-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 18px;
+    padding: 18px;
+  }
+
+  .contact-copy p:not(.eyebrow) {
+    font-size: 15px;
+  }
+
+  .qr-card {
+    justify-self: center;
+    width: min(100%, 280px);
   }
 
   .mobile-dock {
