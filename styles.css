@@ -706,20 +706,51 @@ footer p {
 .qr-card {
   margin: 0;
   justify-self: end;
-  width: min(100%, 300px);
-  padding: 12px;
+  width: min(100%, 360px);
+  padding: 16px;
   border-radius: var(--radius);
   background: rgba(154, 78, 63, 0.07);
 }
 
-.qr-card img {
+.qr-profile {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.qr-profile img {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+.qr-profile strong {
+  display: block;
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.qr-profile span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.qr-image {
   width: 100%;
+  height: auto;
   display: block;
   border-radius: calc(var(--radius) - 2px);
+  background: #fff;
 }
 
 .qr-card figcaption {
-  margin-top: 10px;
+  margin-top: 12px;
   color: var(--muted);
   font-size: 14px;
   font-weight: 900;
@@ -976,7 +1007,21 @@ footer {
 
   .qr-card {
     justify-self: center;
-    width: min(100%, 280px);
+    width: min(100%, 320px);
+    padding: 14px;
+  }
+
+  .qr-profile {
+    grid-template-columns: 46px minmax(0, 1fr);
+  }
+
+  .qr-profile img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .qr-profile strong {
+    font-size: 16px;
   }
 
   .mobile-dock {
