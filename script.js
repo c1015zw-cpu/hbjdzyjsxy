@@ -3,10 +3,10 @@ const taskData = {
     kicker: "Before Campus",
     title: "出发前 48 小时，把不能补的东西先放好",
     list: [
-      "录取通知书、身份证、证件照、档案相关材料分开放，手机里同步保存电子照片。",
-      "导航收藏“山西工程科技职业大学”，地址以晋中市榆次区文华街 369 号为准，出行前再确认当年接站和入校要求。",
+      "录取通知书、身份证、证件照、档案材料分开收纳，手机里同步保存电子照片。",
+      "导航收藏“河北机电职业技术学院”，地址以河北省邢台市信都区泉北西大街 1169 号为准，出行前再核验当年接站和进校要求。",
       "生活用品先带刚需：换洗衣物、充电器、常用药、水杯、雨具。大件收纳到校后看宿舍尺寸再买。",
-      "提前关注学校官网、招生信息网和学院通知，不只依赖二手群消息。"
+      "提前关注学校官网、招生网、迎新系统和学院通知，不只依赖二手群消息。"
     ],
     tip: "出发前不要把所有快递一次寄到学校。宿舍号和取件点确认后再下单，能减少排队和找件时间。"
   },
@@ -15,7 +15,7 @@ const taskData = {
     title: "报到日先跟学院流程走，不急着办额外项目",
     list: [
       "进校后先找学院迎新点，完成身份核验，确认班级群、辅导员、宿舍和当天集合安排。",
-      "缴费、校园卡、体检、军训服装等事项按现场指引逐项确认，遇到不清楚的先问迎新志愿者。",
+      "缴费、校园卡、体检、军训服装等事项按现场指引逐项确认，遇到不清楚的先问迎新志愿者或辅导员。",
       "家长同行时提前约定校内集合点，搬行李前先确认宿舍楼和床位，避免走回头路。",
       "当天任何涉及转账、贷款、电话卡、兼职押金的消息，都先暂停并向辅导员核实。"
     ],
@@ -28,7 +28,7 @@ const taskData = {
       "床品、洗漱包、拖鞋、衣架、纸巾、垃圾袋优先级最高，其他装饰类用品可以延后。",
       "插排、电吹风、锅具等电器先看宿舍管理规定，违规电器不要带也不要买。",
       "收纳用品少量先买，等看到柜子、桌面和床下空间后再补，尺寸会更准确。",
-      "和舍友早一点约定卫生轮值、作息声音、空调或风扇使用习惯。"
+      "和舍友早点约定卫生轮值、作息声音、空调或风扇使用习惯。"
     ],
     tip: "宿舍不是一天布置完的。第一周的真实需求，比开学前的购物清单更可靠。"
   },
@@ -62,6 +62,15 @@ const taskTitle = document.querySelector("#task-title");
 const taskList = document.querySelector("#task-list");
 const taskTip = document.querySelector("#task-tip");
 
+function escapeHtml(value) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
 function renderTask(key) {
   const task = taskData[key];
   if (!task) return;
@@ -72,7 +81,7 @@ function renderTask(key) {
 
   taskKicker.textContent = task.kicker;
   taskTitle.textContent = task.title;
-  taskList.innerHTML = task.list.map((item) => `<li>${item}</li>`).join("");
+  taskList.innerHTML = task.list.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
   taskTip.textContent = task.tip;
 }
 
@@ -81,7 +90,7 @@ taskButtons.forEach((button) => {
 });
 
 document.querySelectorAll(".checks input").forEach((checkbox, index) => {
-  const storageKey = `sxgkd-freshman-check-${index}`;
+  const storageKey = `hbjd-freshman-check-${index}`;
   checkbox.checked = window.localStorage.getItem(storageKey) === "1";
   checkbox.addEventListener("change", () => {
     window.localStorage.setItem(storageKey, checkbox.checked ? "1" : "0");
