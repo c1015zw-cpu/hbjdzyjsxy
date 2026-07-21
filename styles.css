@@ -9,6 +9,7 @@
   --muted: #7b6d64;
   --line: rgba(48, 40, 34, 0.12);
   --shadow: 0 24px 70px rgba(88, 58, 43, 0.12);
+  --mobile-shadow: 0 8px 22px rgba(88, 58, 43, 0.08);
   --content: 1180px;
   --radius: 8px;
 }
@@ -741,6 +742,14 @@ footer {
 @media (max-width: 680px) {
   body {
     padding-bottom: 84px;
+    background: var(--warm);
+  }
+
+  body::before {
+    background:
+      linear-gradient(90deg, rgba(154, 78, 63, 0.035) 1px, transparent 1px),
+      linear-gradient(rgba(154, 78, 63, 0.03) 1px, transparent 1px);
+    background-size: 34px 34px;
   }
 
   main,
@@ -754,6 +763,8 @@ footer {
     min-height: 54px;
     display: flex;
     padding: 8px 10px;
+    box-shadow: var(--mobile-shadow);
+    backdrop-filter: none;
   }
 
   .brand img {
@@ -814,6 +825,31 @@ footer {
   .launch-panel {
     width: 100%;
     padding: 18px;
+  }
+
+  .hero-meta div,
+  .launch-panel,
+  .school-signal div,
+  .route-steps li,
+  .task-card,
+  .checks label,
+  .tool-grid a,
+  .creator-strip {
+    box-shadow: var(--mobile-shadow);
+  }
+
+  .progress-ring {
+    width: 128px;
+    height: 128px;
+    margin: 4px 0;
+  }
+
+  .progress-ring strong {
+    font-size: 30px;
+  }
+
+  .snapshot-strip img {
+    height: 132px;
   }
 
   .school-signal {
@@ -880,8 +916,8 @@ footer {
     border: 1px solid rgba(255, 253, 248, 0.82);
     border-radius: 999px;
     background: rgba(255, 253, 248, 0.88);
-    box-shadow: 0 16px 42px rgba(88, 58, 43, 0.18);
-    backdrop-filter: blur(18px);
+    box-shadow: var(--mobile-shadow);
+    backdrop-filter: none;
   }
 
   .mobile-dock a {
