@@ -239,7 +239,6 @@ footer p {
 .task-card,
 .checks label,
 .tool-grid a,
-.workflow,
 .creator-strip {
   border: 1px solid rgba(255, 253, 248, 0.82);
   border-radius: var(--radius);
@@ -413,7 +412,6 @@ footer p {
 .workspace,
 .ledger,
 .tools,
-.workflow,
 .creator-strip {
   max-width: var(--content);
   margin: 0 auto;
@@ -498,7 +496,6 @@ footer p {
 #task-tip,
 .checks label,
 .tool-grid small,
-.workflow li span,
 .source-note {
   color: var(--muted);
   font-size: 16px;
@@ -669,39 +666,6 @@ footer p {
   color: rgba(255, 253, 248, 0.74);
 }
 
-.workflow {
-  margin-top: 74px;
-  padding: clamp(24px, 3vw, 38px);
-}
-
-.workflow .section-head::before {
-  content: "05";
-}
-
-.workflow ol {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin: 20px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.workflow li {
-  min-height: 126px;
-  display: grid;
-  align-content: start;
-  gap: 8px;
-  padding: 18px;
-  border-radius: var(--radius);
-  background: rgba(154, 78, 63, 0.07);
-}
-
-.workflow li strong {
-  color: var(--ink);
-  font-size: 19px;
-}
-
 .mobile-dock {
   display: none;
 }
@@ -772,9 +736,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .workflow ol {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 680px) {
@@ -891,8 +852,7 @@ footer {
     scroll-snap-align: start;
   }
 
-  .task-card,
-  .workflow {
+  .task-card {
     padding: 20px;
   }
 
@@ -907,10 +867,6 @@ footer {
     height: 72px;
   }
 
-  .workflow ol {
-    grid-template-columns: 1fr;
-  }
-
   .mobile-dock {
     position: fixed;
     left: 12px;
@@ -918,7 +874,7 @@ footer {
     bottom: 12px;
     z-index: 30;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 6px;
     padding: 8px;
     border: 1px solid rgba(255, 253, 248, 0.82);
