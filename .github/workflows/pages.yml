@@ -1,9 +1,12 @@
 name: Deploy static site to Pages
 
 on:
-  push:
-    branches: ["main"]
   workflow_dispatch:
+    inputs:
+      confirm_deploy:
+        description: "Type DEPLOY to confirm this manual production deployment"
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -16,6 +19,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: ${{ github.event.inputs.confirm_deploy == 'DEPLOY' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
