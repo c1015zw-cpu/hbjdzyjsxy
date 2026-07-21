@@ -3,235 +3,305 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>河北机电职业技术学院迎新导航 | 浪花新生上岸指南</title>
+    <meta name="theme-color" content="#9a4e3f" />
     <meta
       name="description"
-      content="面向河北机电职业技术学院 2026 级新生的非官方迎新导航，整理报到流程、到校前任务、宿舍准备、校园入口和防坑提醒。"
+      content="河北机电职业技术学院 2026 级新生非官方行动指南，整理官方入口、报到流程、阶段任务、行李清单、第一周安排与安全提醒。"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <meta property="og:title" content="河北机电职业技术学院迎新导航" />
+    <meta property="og:description" content="从收到通知书到走进教室，把新生第一周要做的事一次整理清楚。" />
+    <meta property="og:type" content="website" />
+    <title>河北机电职业技术学院迎新导航</title>
+    <link rel="icon" href="assets/avatar-240.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="styles.css?v=2.0.0" />
+    <script src="content.js?v=2.0.0" defer></script>
+    <script src="app.js?v=2.0.0" defer></script>
   </head>
   <body>
-    <header class="topbar" aria-label="页面导航">
-      <a class="brand" href="#top" aria-label="回到顶部">
-        <img src="assets/avatar-240.jpg" width="240" height="240" decoding="async" alt="浪花头像" />
-        <span>浪花 · 机电新生上岸</span>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <div class="page-doodles" aria-hidden="true">
+      <span class="page-doodle page-doodle-scarf"></span>
+      <span class="page-doodle page-doodle-mug"></span>
+      <span class="page-doodle page-doodle-lantern"></span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark" data-brand-logo aria-hidden="true"></span>
+        <span class="brand-copy">
+          <strong data-brand-name>河北机电迎新导航</strong>
+          <small data-brand-subtitle>Freshman Guide</small>
+        </span>
       </a>
-      <nav>
-        <a href="#route">报到</a>
-        <a href="#tasks">任务</a>
-        <a href="#tools">入口</a>
+      <nav class="desktop-nav" aria-label="主要导航">
+        <a href="#official">官方入口</a>
+        <a href="#roadmap">报到流程</a>
+        <a href="#tasks">阶段任务</a>
         <a href="#contact">联系</a>
       </nav>
+      <button class="ghost-button share-button" type="button" data-share>分享</button>
+      <div class="header-pendants" aria-label="可拖动的弹性挂坠">
+        <div class="elastic-pendant pendant-wine" data-elastic-pendant role="button" tabindex="0" aria-label="拖动酒杯幽灵挂坠">
+          <span class="pendant-hole" aria-hidden="true"></span>
+          <span class="pendant-string" aria-hidden="true"></span>
+          <span class="pendant-body" data-pendant-body aria-hidden="true">
+            <span class="pendant-art pendant-wine-art pendant-wine-bottle"></span>
+            <span class="pendant-art pendant-wine-art pendant-wine-ghost"></span>
+            <span class="pendant-art pendant-wine-art pendant-wine-glass"></span>
+          </span>
+        </div>
+        <div class="elastic-pendant pendant-yarn" data-elastic-pendant role="button" tabindex="0" aria-label="拖动毛线幽灵挂坠">
+          <span class="pendant-hole" aria-hidden="true"></span>
+          <span class="pendant-string" aria-hidden="true"></span>
+          <span class="pendant-body" data-pendant-body aria-hidden="true">
+            <span class="pendant-art pendant-yarn-art pendant-yarn-ball"></span>
+            <span class="pendant-art pendant-yarn-art pendant-yarn-ghost"></span>
+          </span>
+        </div>
+        <div class="elastic-pendant pendant-duo" data-elastic-pendant role="button" tabindex="0" aria-label="拖动猫猫和幽灵挂坠">
+          <span class="pendant-hole" aria-hidden="true"></span>
+          <span class="pendant-string" aria-hidden="true"></span>
+          <span class="pendant-body" data-pendant-body aria-hidden="true">
+            <span class="mascot-piece mascot-piece-cat"></span>
+            <span class="mascot-piece mascot-piece-ghost"></span>
+          </span>
+        </div>
+        <div class="elastic-pendant pendant-stretch" data-elastic-pendant role="button" tabindex="0" aria-label="拖动伸展幽灵挂坠">
+          <span class="pendant-hole" aria-hidden="true"></span>
+          <span class="pendant-string" aria-hidden="true"></span>
+          <span class="pendant-body" data-pendant-body aria-hidden="true">
+            <span class="pendant-art pendant-stretch-art pendant-stretch-left"></span>
+            <span class="pendant-art pendant-stretch-art pendant-stretch-ghost"></span>
+            <span class="pendant-art pendant-stretch-art pendant-stretch-right"></span>
+          </span>
+        </div>
+      </div>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">2026 新生第一周行动指南</p>
-          <h1 id="hero-title">第一次到河北机电，照着这份清单慢慢来</h1>
-          <p>
-            把“收到通知书到入住宿舍”的事情拆成报到路线、阶段任务、入学账本和官方入口。
-            涉及时间、缴费、宿舍、军训和接站安排时，仍以学校当年正式通知为准。
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="theme-picker reveal" aria-label="切换网站主题色">
+          <span>换个心情</span>
+          <div data-theme-picker></div>
+        </div>
+        <div class="hero-copy reveal">
+          <p class="edition" data-edition>2026 新生第一周行动指南</p>
+          <h1>
+            <span data-hero-prefix>河北机电新生上岸</span>
+            <em data-hero-title>照着这份地图慢慢来</em>
+          </h1>
+          <p class="hero-intro" data-hero-intro>
+            从收到通知书到走进教室，把报到、入住和开课前要做的事一次整理清楚。
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#route">查看报到路线</a>
-            <a class="button" href="#tasks">打开任务卡</a>
+            <a class="primary-button" href="#roadmap" data-primary-action>先看报到流程</a>
           </div>
-          <div class="hero-meta" aria-label="核心信息">
+          <div class="hero-meta" aria-label="关键信息">
             <div>
-              <span>适配场景</span>
-              <strong>手机 / 平板 / 电脑</strong>
+              <span>年度安排</span>
+              <strong data-arrival-date>以学校 2026 年正式通知为准</strong>
             </div>
             <div>
-              <span>页面边界</span>
-              <strong>非官方攻略，官方通知优先</strong>
+              <span>学校地址</span>
+              <strong data-campus-address>河北省邢台市信都区泉北西大街 1169 号</strong>
             </div>
           </div>
         </div>
 
-        <aside class="launch-panel" aria-label="准备进度与账号信息">
-          <div class="launch-top">
+        <aside class="launch-card reveal" aria-label="入学准备进度">
+          <div class="launch-card-top">
             <span class="status-dot"></span>
-            <span>你的准备清单</span>
-            <small>本机保存</small>
+            <span data-status-label>你的准备清单</span>
+            <small data-updated-at>更新于 07.21</small>
           </div>
-          <div class="progress-ring" aria-label="清单完成进度">
-            <strong data-progress-percent>0%</strong>
-            <span>清单进度</span>
-          </div>
-          <p>勾选下方入学账本后，进度只保存在当前浏览器，不上传个人信息。</p>
-          <div class="profile-proof">
-            <img class="profile-avatar" src="assets/avatar-240.jpg" width="240" height="240" decoding="async" alt="浪花头像" />
+          <div class="progress-orbit" data-progress-orbit style="--progress: 0deg">
             <div>
-              <strong>浪花</strong>
-              <span>抖音号：192605277</span>
+              <strong data-progress-percent>0%</strong>
+              <span>清单进度</span>
             </div>
           </div>
-          <figure class="snapshot-strip" aria-label="浪花主页关键信息截图">
-            <img src="assets/douyin-profile-banner-640.jpg" width="640" height="499" decoding="async" fetchpriority="high" alt="浪花抖音主页关键信息截图" />
-            <figcaption>新生答疑 / 单招上岸 / 机电新生交流</figcaption>
-          </figure>
-        </aside>
-
-        <aside class="school-signal" aria-label="学校基础信息">
-          <div>
-            <span>学校地址</span>
-            <strong>河北省邢台市信都区泉北西大街 1169 号</strong>
-          </div>
-          <div>
-            <span>招生咨询</span>
-            <strong>0319-8769861</strong>
-          </div>
-          <div>
-            <span>核验原则</span>
-            <strong>时间、缴费、宿舍、军训以学校当年正式通知为准</strong>
-          </div>
+          <p data-card-message>勾选完成项后，进度只保存在当前浏览器，不上传个人信息。</p>
+          <a href="#checklist">继续完成清单 <span aria-hidden="true">→</span></a>
         </aside>
       </section>
 
-      <section id="route" class="route-board" aria-labelledby="route-title">
-        <div class="section-head">
-          <p class="eyebrow">Arrival Flow</p>
-          <h2 id="route-title">到校当天按这个顺序走</h2>
-          <p>先确认身份和学院安排，再处理行李和宿舍，避免在校园里反复折返。</p>
-        </div>
-        <ol class="route-steps">
-          <li>
-            <span>01</span>
-            <h3>找学院迎新点</h3>
-            <p>到校后先找本学院迎新点或志愿者，核对录取信息、专业、班级群、辅导员通知和现场流程。</p>
-          </li>
-          <li>
-            <span>02</span>
-            <h3>确认缴费与材料</h3>
-            <p>按官方系统和现场指引处理学籍、缴费状态、校园卡、体检或军训相关材料，不清楚先问辅导员。</p>
-          </li>
-          <li>
-            <span>03</span>
-            <h3>再搬宿舍行李</h3>
-            <p>确认宿舍楼、房间和床位后再搬大件。家长同行时提前约好集合点，减少来回找人的时间。</p>
-          </li>
-          <li>
-            <span>04</span>
-            <h3>晚上整理信息</h3>
-            <p>把宿舍号、辅导员联系方式、班级群、常用地图点位同步给家人，也方便第二天快速查找。</p>
-          </li>
-        </ol>
-      </section>
-
-      <section id="tasks" class="workspace" aria-label="新生任务卡">
-        <div class="task-tabs" role="tablist" aria-label="任务分类">
-          <button class="active" type="button" data-task="before">到校前</button>
-          <button type="button" data-task="report">报到日</button>
-          <button type="button" data-task="dorm">宿舍</button>
-          <button type="button" data-task="study">开课前</button>
-          <button type="button" data-task="safety">避坑</button>
-        </div>
-
-        <article class="task-card" aria-live="polite">
+      <section class="content-chapter chapter-content campus-guide" id="guide" aria-labelledby="guide-title">
+        <header class="chapter-heading reveal">
+          <span class="chapter-number">01</span>
           <div>
-            <p class="eyebrow" id="task-kicker">Before Campus</p>
-            <h2 id="task-title">出发前 48 小时，把不能补的东西先放好</h2>
+            <p>新生行动地图</p>
+            <h2 id="guide-title"><span class="chapter-title-line">先完成眼前最重要的事，</span><span class="chapter-title-line">再慢慢熟悉新的校园</span></h2>
+            <span>页面为非官方经验整理；时间、缴费、住宿、军训和接站安排以学校当年正式通知为准。</span>
           </div>
-          <ul id="task-list"></ul>
-          <p id="task-tip"></p>
-        </article>
+        </header>
+
+        <section class="capability-ribbon reveal" aria-label="页面内容概览" data-highlights></section>
+
+        <div class="module-heading reveal">
+          <div class="module-badge"><b>A</b><span>先核信息</span></div>
+          <div class="module-heading-copy">
+            <small>OFFICIAL FIRST</small>
+            <h3>重要提醒与官方入口</h3>
+            <p>先确认学校发布的信息，再参考同学经验；遇到缴费和账号问题时只走官方渠道。</p>
+          </div>
+        </div>
+        <section class="notice-wrap reveal" data-notice-wrap>
+          <div class="notice-icon" aria-hidden="true">!</div>
+          <div>
+            <strong data-notice-title>先认准官方通知</strong>
+            <p data-notice-text>报到、缴费、宿舍与接站安排以学校当年正式通知为准。</p>
+          </div>
+          <a href="#services">查看入口</a>
+        </section>
+        <section class="section quick-section" id="official" aria-labelledby="quick-title">
+          <div class="section-heading reveal">
+            <p>QUICK ACCESS</p>
+            <h2 id="quick-title">新生最常用的四个入口</h2>
+            <span>路线、任务、官方系统和联系入口都集中在这里，手机打开就能找到。</span>
+          </div>
+          <div class="quick-grid" data-quick-links></div>
+        </section>
+
+        <div class="module-heading reveal">
+          <div class="module-badge"><b>B</b><span>按步行动</span></div>
+          <div class="module-heading-copy">
+            <small>ARRIVAL PLAN</small>
+            <h3>报到流程、阶段任务与第一周</h3>
+            <p>不把所有信息一次塞给新生，到了哪个阶段，就看哪一组任务。</p>
+          </div>
+        </div>
+        <section class="section roadmap-section" id="roadmap" aria-labelledby="roadmap-title">
+          <div class="section-heading light reveal">
+            <p>ARRIVAL ROADMAP</p>
+            <h2 id="roadmap-title">报到当天，一条线走完</h2>
+            <span data-roadmap-intro>现场安排可能变化，先找到学院迎新点再行动。</span>
+          </div>
+          <ol class="roadmap" data-roadmap></ol>
+        </section>
+        <section class="section task-section" id="tasks" aria-labelledby="task-section-title">
+          <div class="section-heading reveal">
+            <p>ACTION BOARD</p>
+            <h2 id="task-section-title">按阶段查看，不被信息淹没</h2>
+            <span>出发前、报到日、宿舍、开课前和安全事项分别整理，左右滑动即可切换。</span>
+          </div>
+          <div class="task-app reveal">
+            <div class="task-tabs" role="tablist" aria-label="任务阶段" data-task-tabs></div>
+            <article class="task-panel" data-task-panel aria-live="polite"></article>
+          </div>
+        </section>
+        <section class="section week-section" id="week" aria-labelledby="week-title">
+          <div class="section-heading reveal">
+            <p>FIRST WEEK</p>
+            <h2 id="week-title">第一周先把生活半径跑通</h2>
+            <span>具体日程以学院通知为准，这里只帮你抓住每个阶段最重要的事。</span>
+          </div>
+          <div class="week-grid" data-week-plan></div>
+        </section>
+
+        <div class="module-heading reveal">
+          <div class="module-badge"><b>C</b><span>随手可查</span></div>
+          <div class="module-heading-copy">
+            <small>SERVICE TOOLS</small>
+            <h3>官方服务目录与互动清单</h3>
+            <p>官方网页、迎新系统和智慧校园集中跳转；自己的准备情况留在本机，不收集个人信息。</p>
+          </div>
+        </div>
+        <section class="section service-directory-section" id="services" aria-labelledby="services-title">
+          <div class="section-heading service-heading reveal">
+            <p>OFFICIAL SERVICE DIRECTORY</p>
+            <h2 id="services-title">重要入口，统一从这里进入</h2>
+            <span>所有校务入口均指向学校公开页面；登录、缴费和账号操作前请再次核对域名。</span>
+          </div>
+          <div class="service-toolbar reveal" data-service-filters aria-label="筛选学校服务"></div>
+          <div class="service-grid" data-service-grid aria-live="polite"></div>
+          <p class="service-footnote reveal">地址与招生咨询电话来自学校官网公开信息，核验日期为 2026-07-21。</p>
+        </section>
+        <section class="section checklist-section" id="checklist" aria-labelledby="checklist-title">
+          <div class="checklist-intro reveal">
+            <p>MY CHECKLIST</p>
+            <h2 id="checklist-title">把最容易遗漏的事一项项勾掉</h2>
+            <span>勾选结果只保存在当前设备的浏览器中，换设备后需要重新勾选。</span>
+            <div class="mini-progress" aria-label="清单完成进度">
+              <i data-mini-progress></i>
+            </div>
+            <strong data-checklist-count>0 / 0 已完成</strong>
+            <button class="reset-button" type="button" data-reset-checklist>重置清单</button>
+          </div>
+          <div class="checklist-card reveal" data-checklist></div>
+        </section>
+
+        <div class="module-heading reveal">
+          <div class="module-badge"><b>D</b><span>安全答疑</span></div>
+          <div class="module-heading-copy">
+            <small>STAY SAFE</small>
+            <h3>开学季安全提醒与常见问题</h3>
+            <p>转账、验证码、陌生群和现场推销都多核实一步，拿不准就先停下。</p>
+          </div>
+        </div>
+        <section class="section safety-section" id="safety" aria-labelledby="safety-title">
+          <div class="section-heading light reveal">
+            <p>STAY SAFE</p>
+            <h2 id="safety-title">钱、证件和账号，先守好这三条</h2>
+            <span>真实老师和学校部门不会催促学生向私人账户转账。</span>
+          </div>
+          <div class="safety-grid" data-safety-cards></div>
+        </section>
+        <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+          <div class="section-heading reveal">
+            <p>COMMON QUESTIONS</p>
+            <h2 id="faq-title">新生高频问题，点开就能看</h2>
+            <span>如果页面信息和学校通知不一致，无条件以学校当年正式通知为准。</span>
+          </div>
+          <div class="faq-list reveal" data-faq-list></div>
+        </section>
       </section>
 
-      <section class="ledger" aria-labelledby="ledger-title">
-        <div class="section-head">
-          <p class="eyebrow">Personal Checklist</p>
-          <h2 id="ledger-title">入学账本</h2>
-          <p>勾选状态会保存在当前浏览器。具体报到日期、收费项目、宿舍安排、军训和接站安排，以学校当年通知为准。</p>
-        </div>
-        <div class="checks">
-          <label><input type="checkbox" /> 录取通知书、身份证、证件照、档案相关材料已单独收纳</label>
-          <label><input type="checkbox" /> 已收藏学校位置：河北省邢台市信都区泉北西大街 1169 号</label>
-          <label><input type="checkbox" /> 已关注学校官网、招生网、迎新系统和学院通知入口</label>
-          <label><input type="checkbox" /> 手机充电器、插排、常用药、雨具、水杯和洗漱用品已准备</label>
-          <label><input type="checkbox" /> 到校后确认班级群、宿舍号、辅导员联系方式和紧急电话</label>
-        </div>
-      </section>
-
-      <section id="tools" class="tools" aria-labelledby="tools-title">
-        <div class="section-head">
-          <p class="eyebrow">Official Entrances</p>
-          <h2 id="tools-title">先看官方入口，再看同学经验</h2>
-          <p>页面是非官方攻略，涉及时间、费用、报到要求和住宿安排时，优先以这些入口发布的信息为准。</p>
-        </div>
-        <div class="tool-grid">
-          <a href="https://www.hbjd.edu.cn/" target="_blank" rel="noreferrer">
-            <span>官网</span>
-            <strong>河北机电职业技术学院</strong>
-            <small>新闻、通知、学校服务入口</small>
-          </a>
-          <a href="https://zs.hbjd.edu.cn/" target="_blank" rel="noreferrer">
-            <span>招生网</span>
-            <strong>招生信息与录取通知</strong>
-            <small>章程、通知公告、录取相关信息</small>
-          </a>
-          <a href="https://yx.hbjd.edu.cn/" target="_blank" rel="noreferrer">
-            <span>迎新系统</span>
-            <strong>官方迎新办理入口</strong>
-            <small>以学校开放时间和账号规则为准</small>
-          </a>
-          <a href="https://portal.hbjd.edu.cn/" target="_blank" rel="noreferrer">
-            <span>智慧校园</span>
-            <strong>校园服务入口</strong>
-            <small>账号开通后再按学校通知登录</small>
-          </a>
-        </div>
-        <p class="source-note">
-          官方入口、地址与招生就业指导中心电话已于 2026-07-21 从学校官网公开页面核验；报到日期、缴费、宿舍、军训、接站等年度安排需以当年正式通知为准。
-        </p>
-      </section>
-
-      <section class="creator-strip" aria-label="浪花账号介绍">
-        <img src="assets/avatar-240.jpg" width="240" height="240" loading="lazy" decoding="async" alt="浪花头像" />
-        <div>
-          <p class="eyebrow">Student Voice</p>
-          <h2>用同学视角补齐“官方通知之外的第一周体验”</h2>
-          <p>适合放报到路线、宿舍生活、校园吃饭、入学疑问、避坑提醒和评论区高频问题。官方信息负责准，同学经验负责好懂。</p>
-        </div>
-      </section>
-
-      <section class="contact-card" aria-labelledby="contact-title">
+      <section class="contact-strip contact-module reveal" id="contact" data-contact-wrap aria-labelledby="contact-title">
         <div class="contact-copy">
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">还有问题，可以加浪花微信</h2>
-          <p>扫码添加好友后说明“河北机电新生”，适合咨询报到路线、宿舍生活、入学疑问和评论区高频问题。涉及缴费、报到时间、宿舍分配等正式安排，仍以学校官方通知为准。</p>
+          <span data-contact-kicker>还有入学问题？</span>
+          <h2 id="contact-title" data-contact-title>微信联系浪花</h2>
+          <p>扫码后备注“河北机电新生”。适合咨询报到路线、宿舍生活和入学准备；正式安排仍以学校通知为准。</p>
           <div class="contact-tags" aria-label="咨询范围">
             <span>报到路线</span>
             <span>宿舍生活</span>
-            <span>入学疑问</span>
+            <span>入学准备</span>
           </div>
+          <a class="primary-button light-button" href="#wechat" data-contact-link>查看微信二维码</a>
         </div>
-        <figure id="contact" class="qr-card">
+        <figure class="qr-card" id="wechat">
           <div class="qr-profile">
-            <img src="assets/avatar-240.jpg" width="240" height="240" decoding="async" alt="浪花头像" />
+            <img src="assets/avatar-240.jpg" width="240" height="240" loading="lazy" decoding="async" alt="浪花头像" />
             <div>
               <strong>A-浪花【智龙校园】</strong>
-              <span>中国大陆 北京</span>
+              <span>微信联系</span>
             </div>
           </div>
-          <img class="qr-image" src="assets/wechat-qr-640.png" width="640" height="640" decoding="async" alt="浪花微信二维码" />
-          <figcaption>微信扫码添加好友</figcaption>
+          <img class="qr-image" src="assets/wechat-qr-640.png" width="640" height="640" loading="lazy" decoding="async" alt="浪花微信二维码" />
+          <figcaption>微信扫码添加，备注“河北机电新生”</figcaption>
         </figure>
       </section>
-
     </main>
 
-    <nav class="mobile-dock" aria-label="手机快捷导航">
-      <a href="#route">报到</a>
-      <a href="#tasks">任务</a>
-      <a href="#tools">入口</a>
-      <a href="#contact">联系</a>
-    </nav>
-
     <footer>
-      <p>非官方新生攻略页。2026 级最终报到时间、缴费、宿舍、军训和接站安排，以河北机电职业技术学院当年正式通知为准。</p>
+      <div class="footer-brand">
+        <span class="brand-mark" data-brand-logo aria-hidden="true"></span>
+        <div>
+          <strong data-brand-name>河北机电迎新导航</strong>
+          <small data-footer-line>把复杂信息变成清晰行动。</small>
+        </div>
+      </div>
+      <p data-footer-note>非官方新生攻略页 · 重要安排以学校正式通知为准</p>
     </footer>
 
-    <script src="script.js"></script>
+    <nav class="mobile-dock" aria-label="手机快捷导航">
+      <a href="#top"><span>⌂</span>首页</a>
+      <a href="#roadmap"><span>路</span>报到</a>
+      <a href="#tasks"><span>✓</span>任务</a>
+      <a href="#wechat"><span>微</span>联系</a>
+    </nav>
+
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+    <noscript>请开启 JavaScript 以查看任务、清单和主题功能。</noscript>
   </body>
 </html>
