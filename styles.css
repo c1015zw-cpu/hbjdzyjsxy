@@ -710,6 +710,7 @@ footer p {
   padding: 16px;
   border-radius: var(--radius);
   background: rgba(154, 78, 63, 0.07);
+  scroll-margin-top: 84px;
 }
 
 .qr-profile {
@@ -1031,7 +1032,7 @@ footer {
     bottom: 12px;
     z-index: 30;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 6px;
     padding: 8px;
     border: 1px solid rgba(255, 253, 248, 0.82);
@@ -1045,7 +1046,7 @@ footer {
     min-height: 40px;
     padding: 0;
     color: var(--ink);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 900;
   }
 }
