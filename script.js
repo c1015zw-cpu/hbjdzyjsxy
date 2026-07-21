@@ -61,6 +61,9 @@ const taskKicker = document.querySelector("#task-kicker");
 const taskTitle = document.querySelector("#task-title");
 const taskList = document.querySelector("#task-list");
 const taskTip = document.querySelector("#task-tip");
+const progressPercent = document.querySelector("[data-progress-percent]");
+const progressRing = document.querySelector(".progress-ring");
+const checklistInputs = document.querySelectorAll(".checks input");
 
 function escapeHtml(value) {
   return value
@@ -89,12 +92,23 @@ taskButtons.forEach((button) => {
   button.addEventListener("click", () => renderTask(button.dataset.task));
 });
 
-document.querySelectorAll(".checks input").forEach((checkbox, index) => {
+function updateProgress() {
+  if (!progressPercent || !progressRing || checklistInputs.length === 0) return;
+
+  const done = [...checklistInputs].filter((checkbox) => checkbox.checked).length;
+  const percent = Math.round((done / checklistInputs.length) * 100);
+  progressPercent.textContent = `${percent}%`;
+  progressRing.style.setProperty("--progress", `${percent * 3.6}deg`);
+}
+
+checklistInputs.forEach((checkbox, index) => {
   const storageKey = `hbjd-freshman-check-${index}`;
   checkbox.checked = window.localStorage.getItem(storageKey) === "1";
   checkbox.addEventListener("change", () => {
     window.localStorage.setItem(storageKey, checkbox.checked ? "1" : "0");
+    updateProgress();
   });
 });
 
 renderTask("before");
+updateProgress();
