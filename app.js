@@ -88,7 +88,7 @@
       document.documentElement.style.setProperty(`--${name}`, value);
     });
 
-    const brandLogo = String(data.brand.logo || 'assets/creator-logo.webp').replace(/["'()\\\r\n]/g, '');
+    const brandLogo = String(data.brand.logo || 'assets/avatar-240.jpg').replace(/["'()\\\r\n]/g, '');
     $$('[data-brand-logo]').forEach((node) => {
       node.style.setProperty('--brand-logo-image', `url("${brandLogo}")`);
       node.addEventListener('contextmenu', (event) => event.preventDefault());
@@ -118,10 +118,10 @@
 
   function assignRandomWatermarks() {
     const watermarkLogos = [
-      "assets/creator-logo-hd.webp",
       "assets/pendant-gear.webp",
       "assets/pendant-backpack.webp",
-      "assets/pendant-letter.webp"
+      "assets/pendant-letter.webp",
+      "assets/decor-open-book.webp"
     ];
     $$(".hero, .week-card, .content-chapter, .contact-strip").forEach((node) => {
       const logo = watermarkLogos[Math.floor(Math.random() * watermarkLogos.length)];
