@@ -1,8 +1,8 @@
 window.SITE_DATA = {
   site: {
     id: "hbjd-freshman-guide",
-    version: "2.0.0",
-    contentVersion: "2.0.0",
+    version: "2.0.1",
+    contentVersion: "2.0.1",
     language: "zh-CN",
     title: "河北机电职业技术学院迎新导航",
     description: "面向河北机电职业技术学院 2026 级新生的非官方行动指南，整理官方入口、报到流程、阶段任务、行李清单与安全提醒。",

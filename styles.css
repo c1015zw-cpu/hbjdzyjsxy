@@ -197,8 +197,8 @@ p { text-wrap: pretty; }
   box-shadow: 0 8px 18px color-mix(in srgb, var(--brand) 13%, transparent);
   transform: translateY(-1px);
 }
-.ghost-button { cursor: pointer; border: 0; background: transparent; }
-.ghost-button { padding: 9px 18px; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; font-weight: 500; }
+.outline-button { cursor: pointer; border: 0; background: transparent; }
+.outline-button { padding: 9px 18px; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; font-weight: 500; }
 
 .header-pendants {
   position: absolute;
@@ -276,10 +276,10 @@ p { text-wrap: pretty; }
 }
 .elastic-pendant.is-dragging { z-index: 5; }
 .elastic-pendant.is-dragging .pendant-body { cursor: grabbing; filter: drop-shadow(0 13px 12px color-mix(in srgb, var(--brand) 22%, transparent)); }
-.pendant-wine { --pendant-x: 17%; --pendant-width: 94px; --pendant-height: 46px; --string-base: 18px; }
-.pendant-yarn { --pendant-x: 29%; --pendant-width: 92px; --pendant-height: 47px; --string-base: 22px; }
-.pendant-duo { --pendant-x: 72%; --pendant-width: 82px; --pendant-height: 82px; --string-base: 14px; }
-.pendant-stretch { --pendant-x: 84%; --pendant-width: 58px; --pendant-height: 58px; --string-base: 18px; }
+.pendant-gear { --pendant-x: 17%; --pendant-width: 64px; --pendant-height: 64px; --string-base: 17px; }
+.pendant-backpack { --pendant-x: 29%; --pendant-width: 62px; --pendant-height: 62px; --string-base: 21px; }
+.pendant-letter { --pendant-x: 72%; --pendant-width: 66px; --pendant-height: 66px; --string-base: 15px; }
+.pendant-campus-cat { --pendant-x: 84%; --pendant-width: 64px; --pendant-height: 64px; --string-base: 18px; }
 .pendant-art {
   position: absolute;
   inset: 0;
@@ -290,79 +290,10 @@ p { text-wrap: pretty; }
   transform-origin: 50% 12%;
   pointer-events: none;
 }
-.pendant-wine-art { background-image: url("assets/pendant-wine.webp"); }
-.pendant-wine-bottle { clip-path: inset(0 69% 0 0); animation: pendant-accessory-left 3.5s ease-in-out infinite; }
-.pendant-wine-ghost { clip-path: inset(0 28% 0 28%); animation: pendant-ghost-breathe 3.2s ease-in-out infinite -.35s; }
-.pendant-wine-glass { clip-path: inset(0 0 0 68%); animation: pendant-accessory-right 3.8s ease-in-out infinite -.8s; }
-.pendant-yarn-art { background-image: url("assets/pendant-yarn.webp"); }
-.pendant-yarn-ball { clip-path: inset(0 68% 0 0); animation: pendant-yarn-roll 4.2s ease-in-out infinite; }
-.pendant-yarn-ghost { clip-path: inset(0 0 0 28%); animation: pendant-ghost-breathe 3.5s ease-in-out infinite -.6s; }
-.pendant-stretch-art { background-image: url("assets/pendant-stretch.webp"); }
-.pendant-stretch-left { clip-path: polygon(0 0, 58% 0, 37% 55%, 0 58%); animation: pendant-stretch-left 3.8s ease-in-out infinite; }
-.pendant-stretch-ghost { clip-path: polygon(26% 18%, 79% 15%, 78% 82%, 25% 80%); animation: pendant-ghost-breathe 3.25s ease-in-out infinite -.45s; }
-.pendant-stretch-right { clip-path: polygon(38% 56%, 100% 40%, 100% 100%, 48% 100%); animation: pendant-stretch-right 3.8s ease-in-out infinite -.15s; }
-.mascot-piece {
-  position: absolute;
-  bottom: 0;
-  display: block;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  transform-origin: 50% 8%;
-  pointer-events: none;
-}
-.mascot-piece-cat {
-  width: 60px;
-  height: 78px;
-  left: -2px;
-  z-index: 2;
-  background-image: url("assets/mascot-cat.webp");
-  animation: mascot-cat-peek 3s ease-in-out infinite;
-}
-.mascot-piece-ghost {
-  width: 58px;
-  height: 74px;
-  right: -2px;
-  bottom: 2px;
-  z-index: 1;
-  background-image: url("assets/mascot-ghost.webp");
-  animation: mascot-ghost-float 3.4s ease-in-out infinite -.45s;
-}
-@keyframes mascot-cat-peek {
-  0%, 36%, 100% { transform: translateY(0) rotate(-1deg); }
-  10% { transform: translateY(3px) rotate(2.8deg); }
-  20% { transform: translateY(0) rotate(-2.2deg); }
-  28% { transform: translateY(2px) rotate(1deg); }
-}
-@keyframes mascot-ghost-float {
-  0%, 100% { transform: translateY(2px) rotate(1.2deg); }
-  45% { transform: translateY(-3px) rotate(-2deg); }
-  68% { transform: translateY(0) rotate(1.8deg); }
-}
-@keyframes pendant-accessory-left {
-  0%, 100% { transform: rotate(-1.2deg) translateY(0); }
-  48% { transform: rotate(2deg) translateY(1px); }
-}
-@keyframes pendant-accessory-right {
-  0%, 100% { transform: rotate(1deg) translateY(0); }
-  50% { transform: rotate(-2.4deg) translateY(-1px); }
-}
-@keyframes pendant-ghost-breathe {
-  0%, 100% { transform: translateY(1px) scale(1); }
-  50% { transform: translateY(-1.5px) scale(1.012); }
-}
-@keyframes pendant-yarn-roll {
-  0%, 100% { transform: rotate(0) translateX(0); }
-  48% { transform: rotate(-4deg) translateX(-1px); }
-}
-@keyframes pendant-stretch-left {
-  0%, 100% { transform: rotate(0); }
-  52% { transform: rotate(-2.5deg) translate(-1px, -1px); }
-}
-@keyframes pendant-stretch-right {
-  0%, 100% { transform: rotate(0); }
-  52% { transform: rotate(2.5deg) translate(1px, 1px); }
-}
+.pendant-gear-art { background-image: url("assets/pendant-gear.webp"); }
+.pendant-backpack-art { background-image: url("assets/pendant-backpack.webp"); }
+.pendant-letter-art { background-image: url("assets/pendant-letter.webp"); }
+.pendant-campus-cat-art { background-image: url("assets/pendant-campus-cat.webp"); }
 
 main { width: min(calc(100% - 40px), var(--content)); margin: 0 auto; }
 .hero {
@@ -897,15 +828,13 @@ footer > p { color: var(--muted); font-size: 11px; }
   .site-header { height: 64px; margin-top: 10px; top: 8px; padding: 0 12px; border-radius: 17px; }
   .brand-mark { width: 38px; height: 38px; }
   .pendant-hole { width: 11px; height: 8px; border-width: 2px; }
-  .pendant-wine { --pendant-x: 15%; --pendant-width: 58px; --pendant-height: 29px; --string-base: 14px; }
-  .pendant-yarn { --pendant-x: 37%; --pendant-width: 56px; --pendant-height: 29px; --string-base: 18px; }
-  .pendant-duo { --pendant-x: 64%; --pendant-width: 58px; --pendant-height: 59px; --string-base: 13px; }
-  .pendant-stretch { --pendant-x: 86%; --pendant-width: 42px; --pendant-height: 42px; --string-base: 17px; }
-  .mascot-piece-cat { width: 43px; height: 56px; left: -1px; }
-  .mascot-piece-ghost { width: 41px; height: 53px; right: -1px; }
+  .pendant-gear { --pendant-x: 15%; --pendant-width: 45px; --pendant-height: 45px; --string-base: 14px; }
+  .pendant-backpack { --pendant-x: 37%; --pendant-width: 43px; --pendant-height: 43px; --string-base: 18px; }
+  .pendant-letter { --pendant-x: 64%; --pendant-width: 46px; --pendant-height: 46px; --string-base: 13px; }
+  .pendant-campus-cat { --pendant-x: 86%; --pendant-width: 45px; --pendant-height: 45px; --string-base: 17px; }
   .brand-copy small { display: none; }
   .brand-copy strong { max-width: 135px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .ghost-button { padding: 8px 13px; }
+  .outline-button { padding: 8px 13px; }
   .hero { min-height: auto; padding: 68px 10px 65px; gap: 48px; }
   .hero::before {
     width: clamp(248px, 72vw, 300px);

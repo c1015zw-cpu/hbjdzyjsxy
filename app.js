@@ -119,9 +119,9 @@
   function assignRandomWatermarks() {
     const watermarkLogos = [
       "assets/creator-logo-hd.webp",
-      "assets/pendant-wine.webp",
-      "assets/pendant-yarn.webp",
-      "assets/pendant-stretch.webp"
+      "assets/pendant-gear.webp",
+      "assets/pendant-backpack.webp",
+      "assets/pendant-letter.webp"
     ];
     $$(".hero, .week-card, .content-chapter, .contact-strip").forEach((node) => {
       const logo = watermarkLogos[Math.floor(Math.random() * watermarkLogos.length)];
